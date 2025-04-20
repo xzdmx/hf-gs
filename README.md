@@ -1,1 +1,1 @@
-# hf-gs
+# High-fidelity 3D Gaussian Inpainting: preserving multi-view consistency and photorealistic details
