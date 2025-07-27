@@ -6,7 +6,7 @@ Title: High-fidelity 3D Gaussian Inpainting: preserving multi-view consistency a
 Install with `conda`: 
 ```bash
 conda env create -f environment.yaml
-conda activate hs-gs
+conda activate hf-gs
 ```
 * The contents of the `gaussian_splatting/submodules` directory are obtained by referencing  [Infusion](https://github.com/ali-vilab/Infusion)
 ## Download Checkpoints

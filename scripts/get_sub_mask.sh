@@ -10,6 +10,8 @@ cd opt_py
 
 # 得到较远的视角
 python find_camera.py --c2w_path ../output/${dataset}/${scene}/train/ours_30000/c2w/ --save_path ../output/${dataset}/${scene}/apart_45_views.txt
+# 手动挑选
+cp ../data/${dataset}/colmap_dir/${scene}/apart_45_views.txt ../output/${dataset}/${scene}
 
 echo "---------------------------------------------gaussians filtering-------------------------------------------------------"
 python gaussians_filter.py --input_ply ../output/${dataset}/${scene}/point_cloud/iteration_30000/point_cloud.ply \
