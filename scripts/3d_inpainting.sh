@@ -1,9 +1,9 @@
-main_image="DSCF0665,DSCF0710" # 主视角
+main_image="DSC08105" # 主视角
 dataset=Mip-NeRF
-scene=kitchen
-image_name=DSCF0710
-last_iter=30000
-iter=20002
+scene=garden
+image_name=DSC08105
+last_iter=1
+iter=10000
 #depth_dir=depth_completed_lama
 depth_dir=depth_completed
 #inpaint_dir=../output/${dataset}/${scene}/lama_inpaint
@@ -16,8 +16,6 @@ save_ply="./output/${dataset}/${scene}/point_cloud/iteration_30001/point_cloud.p
 python compose.py --original_ply $origin_ply  --supp_ply $supp_ply --save_ply $save_ply --nb_points 100 --threshold 1.0
 
 cd gaussian_splatting
-
-
 
 python train1.py -s ../data/${dataset}/colmap_dir/${scene} -m ../output/${dataset}/${scene} --load_iteration 30001 \
         --iteration $iter --inpaint_dir $inpaint_dir --main_image $main_image -u nothing --port 6010 \

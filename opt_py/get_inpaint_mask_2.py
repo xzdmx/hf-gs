@@ -170,11 +170,13 @@ def sigmoid(x):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--model_path', required=True, help='Path to the model.')
+    parser.add_argument('--source_path', required=True, help='Path to the source.')
     # parser.add_argument('--target_image_name', required=True, help='Name of the target image.')
     parser.add_argument('--last_iter', required=True, type=int, help='last iteration number.')
     parser.add_argument('--expand_size', type=int, default=0, help='expand size')
     args = parser.parse_args()
     model_path = args.model_path
+    source_path = args.source_path
     # image_name = args.target_image_name
     last_iter = args.last_iter
     expand_size = args.expand_size
@@ -231,7 +233,18 @@ if __name__ == '__main__':
         # 计算每个连通区域的面积
         sizes = np.bincount(labeled_mask.flatten())[1:]
         # 找到最大面积的索引
-        max_area_index = np.argmax(sizes) + 1
+        if len(sizes) > 0:
+            max_area_index = np.argmax(sizes) + 1
+        else:
+            # 没有找到可用于计算的区域面积，使用原始mask
+            max_area_index = 0  # 默认值，根据实际需求调整
+            src_mask_path=f'{source_path}/seg/{image_name}.png'
+            src_mask=load_mask(src_mask_path)
+            kernel_size = 10
+            src_mask = cv2.dilate(src_mask, np.ones((kernel_size, kernel_size), dtype=np.uint8), iterations=1)
+            cv2.imwrite(f'{model_path}/mask/sub_mask/{image_name}.png', src_mask * 255)
+            continue
+
         # 创建只保留最大面积区域的新 mask
         mask_cleaned = (labeled_mask == max_area_index).astype(np.uint8)
         mask_cleaned[mask_cleaned == 1] = 255

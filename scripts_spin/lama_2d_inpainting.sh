@@ -1,8 +1,6 @@
 dataset=SPIn-NeRF
 scene=9
 
-# 从apart_45_views.txt选择两个视角保存为key_frames.txt（也可直接在apart_45_views.txt的视角中进行inpaint选择较好的结果视角作为key_frame），这里使用默认的视角
-cp ./data/${dataset}/colmap_dir/${scene}/key_frames.txt ./output/${dataset}/${scene}
 cd lama
 
 img_path=../output/${dataset}/${scene}/train/ours_1/renders

@@ -94,14 +94,6 @@ def render_sets(dataset : ModelParams, iteration : int, pipeline : PipelineParam
 
         if not skip_train:
              render_set(dataset.model_path, "train", scene.loaded_iter, scene.getTrainCameras(), gaussians, pipeline, background)
-        # dataset.model_path：模型路径，可能是一个字符串或文件路径对象，用于指定模型的位置。
-        # "train"：一个字符串，可能表示要渲染的数据类型为训练数据。
-        # scene.loaded_iter：加载的迭代次数，可能是一个整数，用于指定加载的模型的版本或迭代次数。
-        # scene.getTrainCameras()：获取训练相机的方法，返回一组相机对象，用于在渲染过程中使用。
-        # gaussians：高斯模型对象，可能是一个包含高斯分布信息的对象。
-        # pipeline：渲染管道对象，可能是一个定义了渲染流程的对象。
-        # background：背景对象，可能是一个定义了渲染场景背景的对象
-
         if not skip_test:
              render_set(dataset.model_path, "test", scene.loaded_iter, scene.getTestCameras(), gaussians, pipeline, background)
 

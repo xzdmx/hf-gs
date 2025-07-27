@@ -1,5 +1,9 @@
-dataset=in2n-data
-scene=bear_1
+dataset=Mip-NeRF
+scene=garden
+#depth_dir=depth_completed_lama
+depth_dir=depth_completed
+#inpaint_dir=lama_inpaint
+inpaint_dir=sd_inpaint
 
 cd depth_inpainting/run
 # 深度补全
@@ -7,16 +11,14 @@ echo "------------------------------------------深度补全--------------------
 model_path="../../checkpoints"  # absolute path
 
 # 输入图像目录
-input_rgb_dir="../../output/${dataset}/${scene}/inpainted_images_dir"
+input_rgb_dir="../../output/${dataset}/${scene}/${inpaint_dir}"
 input_mask_dir="../../output/${dataset}/${scene}/mask/sub_mask"
-#input_mask_dir="../../output/${dataset}/${scene}/mask/seg_expand"
-#input_mask_dir="../../data/${dataset}/colmap_dir/${scene}/seg"
 input_depth_dir="../../output/${dataset}/${scene}/train/ours_1/depth_dis"
 c2w_dir="../../output/${dataset}/${scene}/train/ours_1/c2w"
 intri_dir="../../output/${dataset}/${scene}/train/ours_1/intri"
 
 # 创建输出目录
-output_base_dir="../../output/${dataset}/${scene}/depth_completed"
+output_base_dir="../../output/${dataset}/${scene}/${depth_dir}"
 
 # 获取所有image_name
 image_names=$(ls $input_rgb_dir | sed 's/\.png$//')

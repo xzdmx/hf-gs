@@ -31,6 +31,7 @@ python mask_edge_expend.py --input_dir ../data/${dataset}/colmap_dir/${scene}/se
 # mask处理
 echo "---------------------------------------------mask 处理-------------------------------------------------------"
 python get_inpaint_mask_2.py  --model_path ../output/${dataset}/${scene} \
+      --source_path ../data/${dataset}/colmap_dir/${scene} \
       --last_iter 1 --expand_size 1
 
 

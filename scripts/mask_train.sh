@@ -1,10 +1,10 @@
-dataset=SPIn-NeRF
-scene=9
+dataset=Mip-NeRF
+scene=garden
 cd gaussian_splatting
 # Train incomplete Gaussians
 # kernel_size = 10
-python train.py -s ../data/${dataset}/colmap_dir/${scene} -m ../output/${dataset}/${scene} --mask_training -u nothing --iteration 30000 --eval
+python train.py -s ../data/${dataset}/colmap_dir/${scene} -m ../output/${dataset}/${scene} --mask_training -u nothing --iteration 30000
 #--color_aug
 
 # Obtain c2w matrix, intrinsic matrix, incomplete depth, and rgb rendering image
-python render.py -s ../data/${dataset}/colmap_dir/${scene} -m ../output/${dataset}/${scene} -u nothing --iteration 30000 --eval
+python render.py -s ../data/${dataset}/colmap_dir/${scene} -m ../output/${dataset}/${scene} -u nothing --iteration 30000
