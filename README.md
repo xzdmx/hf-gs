@@ -59,7 +59,7 @@ bash run_lama.sh
 sd:
 
 ```bash
-bash run_sd.sh
+bash run_sd.sh  # todo
 ```
 
 The results of the final picture display are under test or train in the scene directory `/output/[dataset]/[scene]`.
