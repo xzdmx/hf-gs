@@ -1,4 +1,4 @@
-name: hs-gs
+name: hf-gs
 channels:
   - pytorch
   - conda-forge
