@@ -1,7 +1,8 @@
 # HF-GS
 
-Title: High-fidelity 3D Gaussian Inpainting: preserving multi-view consistency and photorealistic details
+Title: High-fidelity 3D Gaussian Inpainting: preserving multi-view consistency and photorealistic details.
 
+![Pipeline](assets/pipeline.jpg)
 ## Installation
 Install with `conda`: 
 ```bash
@@ -46,7 +47,7 @@ data
 
 ## Instructions
 
-We provide two example processes. One is the process of using Lama to repair the spinner dataset, and the other is the process of using stable diffusion to repair the MIP nerf dataset. Select one of the following to execute:
+We provide two example processes. One is the process of using Lama to repair the spinnerf dataset, and the other is the process of using stable diffusion to repair the Mip-NeRF dataset. Select one of the following to execute:
 
 lama:
 
