@@ -8,6 +8,7 @@ Install with `conda`:
 ```bash
 conda env create -f environment.yaml
 conda activate hf-gs
+pip install -r requirements.txt
 ```
 * The contents of the `gaussian_splatting/submodules` directory are obtained by referencing  [Infusion](https://github.com/ali-vilab/Infusion)
 ## Download Checkpoints
