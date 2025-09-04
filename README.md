@@ -20,9 +20,14 @@ Download LaMa and big-lama. Refer to the link: [LaMa](https://github.com/advimma
 
 **Note:** We have two python files in the lama directory used for data preparation
 
+**Alternatively, you can simply run the command below to download and install. If it fails, you can refer to the other download methods provided in this file.**
+```bash
+bash download_install.sh
+```
+
 ## Data Preparation
 
-We have provided two scene [data](https://www.jianguoyun.com/p/DX2ZoOYQv6OSDRiW8YEGIAA) examples, packaged together, which include ground truth (GT) images, segmented masks, and viewpoint information. (The acquisition of this information refers to [Infusion](https://github.com/ali-vilab/Infusion))
+We have provided two scene [data](https://drive.google.com/drive/folders/1aUuvNQZvUwt93CfFBg_ZT2E8Uz_AfC9h?usp=drive_link) examples, packaged together, which include ground truth (GT) images, segmented masks, and viewpoint information. (The acquisition of this information refers to [Infusion](https://github.com/ali-vilab/Infusion))
 
 The result of unzipping in the main directory of hs-gs is: 
 
@@ -45,6 +50,13 @@ data
 ```
 
 - **Note:** Due to the uncertainty of stable diffusion, we provide the repair results for the example.
+
+**You can run the next command to obtain the data.**
+```bash
+# data
+gdown --folder 1aUuvNQZvUwt93CfFBg_ZT2E8Uz_AfC9h --remaining-ok
+
+```
 
 ## Instructions
 
