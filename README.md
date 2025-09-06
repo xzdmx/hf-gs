@@ -8,9 +8,10 @@ Install with `conda`:
 ```bash
 conda env create -f environment.yaml
 conda activate hf-gs
-pip install -r requirements.txt
 ```
+* If the installation of torch fails, please refer to the [PyTorch official website](https://pytorch.org/get-started/previous-versions/) and run this line of code: `pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu118`
 * The `simple-knn` and `diff-gaussian-rasterization-confidence` packages in the `gaussian_splatting/submodules` directory are obtained by referencing [Infusion](https://github.com/ali-vilab/Infusion)
+* If the two packages, `simple-knn` and `diff-gaussian-rasterization-confidence`, fail to download and install successfully, please download them manually according to the `download_install.sh` script.
 ## Download Checkpoints
 Download checkpoint and put it in the 'checkpoints' folder: 
 * [Infusion HuggingFace](https://huggingface.co/Johanan0528/Infusion/tree/main)
@@ -29,7 +30,7 @@ bash download_install.sh
 
 We have provided two scene [data](https://drive.google.com/drive/folders/1aUuvNQZvUwt93CfFBg_ZT2E8Uz_AfC9h?usp=drive_link) examples, packaged together, which include ground truth (GT) images, segmented masks, and viewpoint information. (The acquisition of this information refers to [Infusion](https://github.com/ali-vilab/Infusion))
 
-The result of unzipping in the main directory of hs-gs is: 
+You have downloaded it by running `download_install.sh`. The result of unzipping in the main directory of hs-gs is: 
 
 ```text
 data
@@ -51,12 +52,7 @@ data
 
 - **Note:** Due to the uncertainty of stable diffusion, we provide the repair results for the example.
 
-**You can run the next command to obtain the data.**
-```bash
-# data
-gdown --folder 1aUuvNQZvUwt93CfFBg_ZT2E8Uz_AfC9h --remaining-ok
-
-```
+* If gdown download fails, you can click this [link](https://drive.google.com/drive/folders/1aUuvNQZvUwt93CfFBg_ZT2E8Uz_AfC9h?usp=drive_link) to download it manually.
 
 ## Instructions
 
