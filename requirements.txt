@@ -160,10 +160,7 @@ threadpoolctl==3.5.0
 tifffile==2023.7.10
 timm==0.9.12
 tokenizers==0.19.1
-torch==2.1.2+cu118
-torchaudio==2.1.2+cu118
 torchmetrics==0.2.0
-torchvision==0.16.2+cu118
 tqdm
 traitlets==5.14.3
 transformers==4.40.2

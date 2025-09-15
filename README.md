@@ -8,10 +8,11 @@ Install with `conda`:
 ```bash
 conda env create -f environment.yaml
 conda activate hf-gs
+pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu118
+pip install -r requirements.txt
 ```
-* If the installation of torch fails, please refer to the [PyTorch official website](https://pytorch.org/get-started/previous-versions/) and run this line of code: `pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu118`
-* The `simple-knn` and `diff-gaussian-rasterization-confidence` packages in the `gaussian_splatting/submodules` directory are obtained by referencing [Infusion](https://github.com/ali-vilab/Infusion)
-* If the two packages, `simple-knn` and `diff-gaussian-rasterization-confidence`, fail to download and install successfully, please download them manually according to the `download_install.sh` script.
+* The `simple-knn` and `diff-gaussian-rasterization-confidence` packages in the `gaussian_splatting/submodules` directory are obtained by referencing [Infusion](https://github.com/ali-vilab/Infusion) or run `download_install.sh`
+
 ## Download Checkpoints
 Download checkpoint and put it in the 'checkpoints' folder: 
 * [Infusion HuggingFace](https://huggingface.co/Johanan0528/Infusion/tree/main)
