@@ -8,26 +8,19 @@ Install with `conda`:
 ```bash
 conda env create -f environment.yaml
 conda activate hf-gs
-pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu118
-pip install -r requirements.txt
 ```
-* The `simple-knn` and `diff-gaussian-rasterization-confidence` packages in the `gaussian_splatting/submodules` directory are obtained by referencing [Infusion](https://github.com/ali-vilab/Infusion) or run `download_install.sh`
 
-## Download Checkpoints
-Download checkpoint and put it in the 'checkpoints' folder: 
-* [Infusion HuggingFace](https://huggingface.co/Johanan0528/Infusion/tree/main)
-* Stable Diffusion (Choose one that you think works well. Here we provide the results of SD. The runthrough example does not need to be downloaded)
-
-Download LaMa and big-lama. Refer to the link: [LaMa](https://github.com/advimman/lama)
-
-**Note:** We have two python files in the lama directory used for data preparation
-
-**Alternatively, you can simply run the command below to download and install. If it fails, you can refer to the other download methods provided in this file.**
+## Download Checkpoints & Data Preparation
+**You can simply run the command below to download and install checkpoints and data. If it fails, you can refer to the other download methods provided in this file.**
 ```bash
 bash download_install.sh
 ```
+It include checkpoints as followed: 
+* [Infusion HuggingFace](https://huggingface.co/Johanan0528/Infusion/tree/main)
+* Stable Diffusion (Choose one that you think works well. Here we provide the results of SD. The runthrough example does not need to be downloaded)
+* LaMa and big-lama. Refer to the link: [LaMa](https://github.com/advimman/lama)
 
-## Data Preparation
+**Note:** We have two python files in the lama directory used for data preparation
 
 We have provided two scene [data](https://drive.google.com/drive/folders/1aUuvNQZvUwt93CfFBg_ZT2E8Uz_AfC9h?usp=drive_link) examples, packaged together, which include ground truth (GT) images, segmented masks, and viewpoint information. (The acquisition of this information refers to [Infusion](https://github.com/ali-vilab/Infusion))
 
@@ -54,6 +47,7 @@ data
 - **Note:** Due to the uncertainty of stable diffusion, we provide the repair results for the example.
 
 * If gdown download fails, you can click this [link](https://drive.google.com/drive/folders/1aUuvNQZvUwt93CfFBg_ZT2E8Uz_AfC9h?usp=drive_link) to download it manually. (or download the [data.zip](https://drive.google.com/file/d/1o-YDSlHmO6NALXhmLVxB4XYkc6H78rXE/view?usp=drive_link))
+
 
 ## Instructions
 
