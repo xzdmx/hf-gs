@@ -3,6 +3,10 @@
 Title: High-fidelity 3D Gaussian Inpainting: preserving multi-view consistency and photorealistic details.
 
 ![Pipeline](assets/pipeline.jpg)
+
+## Environment 
+* GPU Requirement: NVIDIA RTX 3090 (24GB VRAM)
+* Operating System: Ubuntu 20.04 LTS
 ## Installation
 Install with `conda`: 
 ```bash
@@ -16,13 +20,13 @@ conda activate hf-gs
 bash download_install.sh
 ```
 It include checkpoints as followed: 
-* [Infusion HuggingFace](https://huggingface.co/Johanan0528/Infusion/tree/main)
+* [Infusion Model Checkpoint](https://huggingface.co/Johanan0528/Infusion/tree/main): Consists of multiple files (not a single file), with a total size of **6.86GB**. It includes pre-trained weights, optimizer states, and training configuration details (for direct loading in inference or further fine-tuning).
 * Stable Diffusion (Choose one that you think works well. Here we provide the results of SD. The runthrough example does not need to be downloaded)
-* LaMa and big-lama. Refer to the link: [LaMa](https://github.com/advimman/lama)
+*  `big-lama`: Compressed file size of **364MB**, used specifically for image inpainting tasks (to repair or fill in missing/defective regions of images), Refer to the link: [LaMa](https://github.com/advimman/lama).
 
 **Note:** We have two python files in the lama directory used for data preparation
 
-We have provided two scene [data](https://drive.google.com/drive/folders/1aUuvNQZvUwt93CfFBg_ZT2E8Uz_AfC9h?usp=drive_link) examples, packaged together, which include ground truth (GT) images, segmented masks, and viewpoint information. (The acquisition of this information refers to [Infusion](https://github.com/ali-vilab/Infusion))
+We have provided two scene [data](https://drive.google.com/drive/folders/1aUuvNQZvUwt93CfFBg_ZT2E8Uz_AfC9h?usp=drive_link) examples (packaged together, with a total size of **147MB**), which include ground truth (GT) images, segmented masks, and viewpoint information. (The acquisition of this information refers to [Infusion](https://github.com/ali-vilab/Infusion)).
 
 You have downloaded it by running `download_install.sh`. The result of unzipping in the main directory of hs-gs is: 
 
