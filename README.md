@@ -68,6 +68,7 @@ sd:
 ```bash
 bash run_sd.sh  # todo
 ```
+* The running time is about **20min**.
 
-The results of the final picture display are under test or train in the scene directory `/output/[dataset]/[scene]`.
+* The results of the final picture display are under test or train in the scene directory `/output/[dataset]/[scene]`.
 
